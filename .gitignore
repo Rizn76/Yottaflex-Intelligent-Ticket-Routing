@@ -1,0 +1,39 @@
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.pyright/
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+!.env.example
+
+# Local databases and their SQLite sidecar files
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+
+# Generated datasets (keep source SQL and documentation trackable)
+/data/generated/
+/data/small/
+/data/full/
+/data/phase*/
+/data/tmp*/
+/data/temp*/
+
+# Local logs and temporary artifacts
+*.log
+/logs/
+/tmp/
+/temp/
+/.tmp*/
+*.tmp
+*.temp
+*.bak
+*.swp
+*.py[cod]
