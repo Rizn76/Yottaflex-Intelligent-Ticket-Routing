@@ -1,0 +1,21 @@
+# AI / LLM Prompt History
+
+
+
+This log records AI assistance used during this implementation. It is not a claim that the candidate has independently reviewed or authored the generated code. Add future prompts and personal review notes before submission.
+
+| Date (IST) | Tool | Prompt / request | Code or documentation used | Changes and verification |
+|---|---|---|---|---|
+| 2026-11-06 | Copilot SDK in VS Code | User attachment “YottaFlex AI — 72-Hour Code Challenge”: inspect the opened workspace, create a requirements checklist, present the proposed architecture for review, then implement the challenge requirements in verified phases. This is a summary, not a verbatim transcript of the attached master prompt. | Workspace comparison, approved phased architecture, project source, SQL schema/queries, tests, README, architecture, ER/data/business/assumption/validation/demo documentation. | Existing files and worktree state were inspected. The checklist/architecture was presented and approved before coding. AI-generated implementation was iterated after test failures. Small and challenge-scale generation, validation, analytics, dashboard, tests, and repeatability checks were subsequently exercised; see the handoff for exact results. |
+| 2026-11-06 | Copilot SDK in VS Code | User request to finalize Phase 5 analytics, dashboard, full-scale dataset verification, documentation, and submission readiness without publishing or modifying the retained generated dataset. | `src/analytics.py`, `dashboard/app.py`, analytics tests, README, business rules, architecture, data dictionary, validation guide, checklist, and `.gitignore`. | Generated a separate `data/phase5-final` dataset (30,000 tickets, 100 agents, 100,000 messages, seed `20261022`, 90 days); full validation passed with 5/5 expected anomalies and zero unexpected errors. SQL import and SQLite integrity/FK checks passed. Two full-scale generations matched counts and checksums for all 44 files. All 48 tests passed, compilation and `pip check` passed, and dashboard pages rendered without automatic actions. The contemporaneous report said the original `data/generated` manifest checksums remained intact; later read-only investigation corrected that statement: 43 of 44 files match, while `tickets.sqlite` differs after two routing-related records were added relative to its earlier validation snapshot. The database integrity check is `ok` with zero foreign-key violations. The existing `data/phase5-final` dataset has since been verified against all 44 manifest checksums, but was not independently regenerated during that latest verification. No commit or push occurred. |
+
+## Review status
+
+- The user approved the checklist and architecture, not a line-by-line code review.
+- The candidate should read and understand each module, rerun the documented commands, and replace this note with their own review and any manual changes.
+- No code was intentionally rejected as part of this session; implementation defects found during execution were corrected and retested.
+- Known constraints and unverified acceptance items are documented in `docs/ASSUMPTIONS.md` and the final task handoff.
+
+## Prompt-history completeness
+
+The entries above summarize the AI requests recorded for this project and are not a complete verbatim transcript. The original master prompt is referenced by its attachment name. Any unavailable historical prompt wording has not been reconstructed or represented as an exact quotation. This log should be supplemented with the remaining prompts from the AI tools used before final submission.
